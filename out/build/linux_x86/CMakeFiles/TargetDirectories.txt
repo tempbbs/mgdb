@@ -1,0 +1,3 @@
+/home/wslbbs/code/mgdb/out/build/linux_x86/CMakeFiles/rebuild_cache.dir
+/home/wslbbs/code/mgdb/out/build/linux_x86/CMakeFiles/edit_cache.dir
+/home/wslbbs/code/mgdb/out/build/linux_x86/CMakeFiles/mgdb.dir
