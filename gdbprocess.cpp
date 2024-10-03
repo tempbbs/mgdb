@@ -88,13 +88,10 @@ int gdbprocess::_togdb(std::string cmd) {
     }
     output[bytesRead] = '\0';  // 添加字符串结束符
     buffer.append(output);
-    // std::cout << output;
-    // std::cout<<std::flush;
-
+    int bufsize=buffer.size();
     // 检查是否到了(gdb)提示符，若是则退出读取
     if (buffer.find("(gdb)") != std::string::npos) {
-      gdballinfo.push(output);
-
+      gdballinfo.push(buffer);
       break;
     }
   }
@@ -111,7 +108,7 @@ int gdbprocess::parsegdbinfo(std::string cmd) {
   gdballinfo.pop();
 
   if (cmd == "n" || cmd == "s" || cmd == "c") {
-    _togdb("info registes");
+    _togdb("info registers");
     _togdb("info local");
     if (wacthvalname.size() != 0) {
       for (auto i : wacthvalname) {
@@ -176,4 +173,12 @@ int gdbprocess::creatgdbprocess() {
     perror("execvp failed");
     return 1;
   }
+}
+
+std::string gdbprocess::getreginfo() {
+    return reginfo;
+}
+
+std::string gdbprocess::getlocalinfo() {
+    return localvalinfo;
 }

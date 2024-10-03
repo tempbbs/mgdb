@@ -65,6 +65,8 @@ class gdbprocess{
         ~gdbprocess();
         
         std::string fromgdb();
+        std::string getreginfo();
+        std::string getlocalinfo();
         int togdb(std::string cmd);
         int _togdb(std::string cmd);
 

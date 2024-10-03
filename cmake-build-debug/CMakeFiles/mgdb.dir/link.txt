@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/mgdb.dir/main.cpp.o CMakeFiles/mgdb.dir/gdbprocess.cpp.o  -o mgdb 
