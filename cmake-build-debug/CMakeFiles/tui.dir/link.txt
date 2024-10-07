@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/tui.dir/tui.cpp.o  -o tui  /usr/local/lib/libftxui-screen.a /usr/local/lib/libftxui-dom.a /usr/local/lib/libftxui-component.a /usr/local/lib/libftxui-dom.a /usr/local/lib/libftxui-screen.a -lpthread 

@@ -53,6 +53,7 @@ CMAKE_BINARY_DIR = /home/bbs/code/tempbbs/mgdb/cmake-build-debug
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
+all: CMakeFiles/tui.dir/all
 all: CMakeFiles/mgdb.dir/all
 
 .PHONY : all
@@ -63,9 +64,37 @@ preinstall:
 .PHONY : preinstall
 
 # The main recursive "clean" target.
+clean: CMakeFiles/tui.dir/clean
 clean: CMakeFiles/mgdb.dir/clean
 
 .PHONY : clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/tui.dir
+
+# All Build rule for target.
+CMakeFiles/tui.dir/all:
+	$(MAKE) -f CMakeFiles/tui.dir/build.make CMakeFiles/tui.dir/depend
+	$(MAKE) -f CMakeFiles/tui.dir/build.make CMakeFiles/tui.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/bbs/code/tempbbs/mgdb/cmake-build-debug/CMakeFiles --progress-num=4,5 "Built target tui"
+.PHONY : CMakeFiles/tui.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/tui.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/bbs/code/tempbbs/mgdb/cmake-build-debug/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/tui.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/bbs/code/tempbbs/mgdb/cmake-build-debug/CMakeFiles 0
+.PHONY : CMakeFiles/tui.dir/rule
+
+# Convenience name for target.
+tui: CMakeFiles/tui.dir/rule
+
+.PHONY : tui
+
+# clean rule for target.
+CMakeFiles/tui.dir/clean:
+	$(MAKE) -f CMakeFiles/tui.dir/build.make CMakeFiles/tui.dir/clean
+.PHONY : CMakeFiles/tui.dir/clean
 
 #=============================================================================
 # Target rules for target CMakeFiles/mgdb.dir

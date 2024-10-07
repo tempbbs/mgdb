@@ -111,6 +111,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named tui
+
+# Build rule for target.
+tui: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 tui
+.PHONY : tui
+
+# fast build rule for target.
+tui/fast:
+	$(MAKE) -f CMakeFiles/tui.dir/build.make CMakeFiles/tui.dir/build
+.PHONY : tui/fast
+
+#=============================================================================
 # Target rules for targets named mgdb
 
 # Build rule for target.
@@ -177,6 +190,33 @@ main.cpp.s:
 	$(MAKE) -f CMakeFiles/mgdb.dir/build.make CMakeFiles/mgdb.dir/main.cpp.s
 .PHONY : main.cpp.s
 
+tui.o: tui.cpp.o
+
+.PHONY : tui.o
+
+# target to build an object file
+tui.cpp.o:
+	$(MAKE) -f CMakeFiles/tui.dir/build.make CMakeFiles/tui.dir/tui.cpp.o
+.PHONY : tui.cpp.o
+
+tui.i: tui.cpp.i
+
+.PHONY : tui.i
+
+# target to preprocess a source file
+tui.cpp.i:
+	$(MAKE) -f CMakeFiles/tui.dir/build.make CMakeFiles/tui.dir/tui.cpp.i
+.PHONY : tui.cpp.i
+
+tui.s: tui.cpp.s
+
+.PHONY : tui.s
+
+# target to generate assembly for a file
+tui.cpp.s:
+	$(MAKE) -f CMakeFiles/tui.dir/build.make CMakeFiles/tui.dir/tui.cpp.s
+.PHONY : tui.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -185,6 +225,7 @@ help:
 	@echo "... depend"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
+	@echo "... tui"
 	@echo "... mgdb"
 	@echo "... gdbprocess.o"
 	@echo "... gdbprocess.i"
@@ -192,6 +233,9 @@ help:
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... tui.o"
+	@echo "... tui.i"
+	@echo "... tui.s"
 .PHONY : help
 
 
