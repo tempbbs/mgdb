@@ -182,3 +182,11 @@ std::string gdbprocess::getreginfo() {
 std::string gdbprocess::getlocalinfo() {
     return localvalinfo;
 }
+
+std::string gdbprocess::getsrc(std::string path) {
+    std::ifstream t(path);
+    std::stringstream buffer;
+    buffer << t.rdbuf();
+    std::string contents(buffer.str());
+    return std::move(contents);
+}

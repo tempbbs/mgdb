@@ -5,7 +5,6 @@ int main(){
 
     gdbprocess gp;
     std::cout << "(gdb-tui) ";
-    gg;
     while(1){
         std::string cmd;
         std::getline(std::cin,cmd);
