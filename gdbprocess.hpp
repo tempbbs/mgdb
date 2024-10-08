@@ -1,6 +1,8 @@
 #include <iostream>
 #include <queue>
 #include <list>
+#include <bits/stdc++.h>
+
 #define BUFFER_SIZE 1024
 enum valtype{
     _string =1,
@@ -65,8 +67,11 @@ class gdbprocess{
         ~gdbprocess();
         
         std::string fromgdb();
+        std::string getreginfo();
+        std::string getlocalinfo();
         int togdb(std::string cmd);
         int _togdb(std::string cmd);
+        std::string getsrc(std::string path);
 
 
         

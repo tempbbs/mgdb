@@ -1,0 +1,4 @@
+/home/bbs/code/tempbbs/mgdb/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/bbs/code/tempbbs/mgdb/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/bbs/code/tempbbs/mgdb/cmake-build-debug/CMakeFiles/tui.dir
+/home/bbs/code/tempbbs/mgdb/cmake-build-debug/CMakeFiles/mgdb.dir

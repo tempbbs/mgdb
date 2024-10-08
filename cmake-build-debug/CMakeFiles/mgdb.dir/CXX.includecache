@@ -1,0 +1,26 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/bbs/code/tempbbs/mgdb/gdbprocess.hpp
+iostream
+-
+queue
+-
+list
+-
+
+/home/bbs/code/tempbbs/mgdb/main.cpp
+bits/stdc++.h
+-
+gdbprocess.hpp
+/home/bbs/code/tempbbs/mgdb/gdbprocess.hpp
+tui.hpp
+/home/bbs/code/tempbbs/mgdb/tui.hpp
+
+/home/bbs/code/tempbbs/mgdb/tui.hpp
+
